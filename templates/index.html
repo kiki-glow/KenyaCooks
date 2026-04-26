@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/static/manifest.json">
+    <title>KenyaCooks</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="website icon" type="png" href="/static/icons/icon-512.png">
+</head>
+<body>
+    <div class="app-container">
+        <div class="card">
+            <h1>What's for Supper?</h1>
+            <p id="idea">Tap below to get an idea!</p>
+            <div class="btn-group">
+                <button class="generate-btn" onclick="getIdea()">Generate Idea</button>
+                <button id="saveBtn" class="save-btn" onclick="saveFavorite()" style="display: none;">
+                    ❤️ Save to Favorites
+                </button>
+                <button id="shareBtn" class="share-btn" onclick="shareToWhatsApp()" style="display: none;">WhatsApp the Plan 📱</button>
+            </div>
+        </div>
+
+        <div class="card favorites-card">
+            <h3>My Favorites</h3>
+            <ul id="favoritesList">
+                </ul>
+        </div>
+    </div>
+<script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --logo-green: #2E9D4D;   /* Vibrant green from the leaves */
+    --chili-red: #E33E2B;    /* The red from the pepper */
+    --flame-orange: #FFB320; /* The orange from the sparks */
+    --warm-beige: #F5F5DC;   /* Keeping your original background */
+    --deep-text: #1A3C23;    /* Very dark green for readability */
+}
+
+body { 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    background-color: var(--warm-beige);
+    color: var(--deep-text);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .app-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+.card { 
+    background: white; 
+    padding: 30px 20px; 
+    border-radius: 24px; 
+    box-shadow: 0 10px 30px rgba(46, 157, 77, 0.1);
+    border-top: 8px solid var(--logo-green);
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+}
+
+.favorites-card {
+    border-top-color: var(--flame-orange);
+}
+
+h1 {
+    color: var(--chili-red); /* "Kenya" red */
+    margin-top: 0;
+}
+
+h3 {
+    color: var(--logo-green); /* "Cooks" green */
+    margin-top: 0;
+}
+
+#idea {
+    font-size: 1.15rem;
+    margin: 25px 0;
+    font-weight: 600;
+    color: var(--deep-text);
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+button { 
+    /* The Glassmorphism Base */
+    background: rgba(46, 157, 77, 0.7); /* Green with transparency */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    
+    color: white; 
+    padding: 16px; 
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle glass edge */
+    border-radius: 16px; 
+    font-size: 1rem; 
+    font-weight: bold;
+    cursor: pointer; 
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Primary Idea Button (Red Glass) */
+.generate-btn {
+    background: rgba(227, 62, 43, 0.75);
+}
+
+/* Save Button (Orange Glass) */
+.save-btn {
+    background: rgba(255, 179, 32, 0.6);
+    color: #4a3200; /* Darker text for readability on orange glass */
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* WhatsApp Button (Green Glass) */
+.share-btn {
+    background: rgba(37, 211, 102, 0.7);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.9); /* Flips to solid-ish on hover */
+    color: var(--deep-text);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+li {
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+li::before {
+    content: "🌶️";
+    margin-right: 10px;
+    font-size: 0.8rem;
+}
