@@ -34,7 +34,7 @@ The app uses a "Farm-to-Table" color palette:
 ### Installation
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/yourusername/kenya-cooks.git](https://github.com/yourusername/kenya-cooks.git)
+   git clone [https://github.com/kiki-glow/KenyaCooks.git](https://github.com/kiki-glow/KenyaCooks.git)
    cd kenya_cooks
    ```
 
@@ -71,12 +71,3 @@ kenya_cooks/
 ## 📜 License
 MIT
 ```
-
----
-
-### Pro-Tip for your GitHub:
-If you want to make this README look even better on GitHub, you can add the screenshot you shared with me earlier. Just upload the image to a folder called `assets` and add this line under the title:
-
-`![App Screenshot](assets/screenshot.png)`
-
-You've turned a simple `random.choice` script into a full-blown app. What’s the next feature on your roadmap—maybe a grocery list generator based on the selected meal?
