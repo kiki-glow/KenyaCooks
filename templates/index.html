@@ -13,11 +13,28 @@
         <div class="card">
             <h1>What's for Supper?</h1>
             <p id="idea">Tap below to get an idea!</p>
+            
+            <div id="extraInfo" style="display: none; text-align: left; margin: 15px 0; font-size: 0.9rem;">
+                <div style="background: rgba(0,0,0,0.05); padding: 10px; border-radius: 10px; margin-bottom: 10px;">
+                    <strong>Steps:</strong> <span id="recipeDisplay"></span>
+                </div>
+                <div style="color: var(--logo-green); font-weight: 600;">
+                    <strong>Dan's Diet Tip:</strong> <span id="healthDisplay"></span>
+                </div>
+            </div>
+
+            <div class="timer-container" style="margin: 20px 0; border-top: 1px solid #eee; padding-top: 15px;">
+                <p style="font-size: 0.8rem; margin-bottom: 5px;">⏲️ Kitchen Timer</p>
+                <div style="display: flex; gap: 5px; justify-content: center; align-items: center;">
+                    <button onclick="startTimer(20)" style="padding: 8px; font-size: 0.7rem;">20m</button>
+                    <button onclick="startTimer(45)" style="padding: 8px; font-size: 0.7rem;">45m</button>
+                    <span id="timerDisplay" style="font-family: monospace; font-weight: bold; margin-left: 10px;">00:00</span>
+                </div>
+            </div>
+
             <div class="btn-group">
                 <button class="generate-btn" onclick="getIdea()">Generate Idea</button>
-                <button id="saveBtn" class="save-btn" onclick="saveFavorite()" style="display: none;">
-                    ❤️ Save to Favorites
-                </button>
+                <button id="saveBtn" class="save-btn" onclick="saveFavorite()" style="display: none;">❤️ Save to Favorites</button>
                 <button id="shareBtn" class="share-btn" onclick="shareToWhatsApp()" style="display: none;">WhatsApp the Plan 📱</button>
             </div>
         </div>

@@ -1,11 +1,38 @@
 let currentMeal = "";
+let timerInterval;
 
 async function getIdea() {
     const res = await fetch('/generate');
     const data = await res.json();
     currentMeal = `${data.base} with ${data.side}`;
+    
+    // Update UI
     document.getElementById('idea').innerText = `You can cook ${currentMeal}!`;
-    document.getElementById('saveBtn').style.display = "inline-block";
+    document.getElementById('recipeDisplay').innerText = data.recipe;
+    document.getElementById('healthDisplay').innerText = data.health_tip;
+    
+    // Show sections
+    document.getElementById('extraInfo').style.display = "block";
+    document.getElementById('saveBtn').style.display = "block";
+    document.getElementById('shareBtn').style.display = "block";
+}
+
+function startTimer(minutes) {
+    clearInterval(timerInterval);
+    let time = minutes * 60;
+    
+    timerInterval = setInterval(() => {
+        let mins = Math.floor(time / 60);
+        let secs = time % 60;
+        document.getElementById('timerDisplay').innerText = 
+            `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        
+        if (time <= 0) {
+            clearInterval(timerInterval);
+            alert("Chakula tayari! Time to serve.");
+        }
+        time--;
+    }, 1000);
 }
 
 function saveFavorite() {
@@ -37,7 +64,6 @@ function shareToWhatsApp() {
     window.open(whatsappUrl, '_blank');
 }
 
-// Update getIdea to show the share button too
 async function getIdea() {
     const res = await fetch('/generate');
     const data = await res.json();
