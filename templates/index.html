@@ -8,18 +8,27 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-BX7PQR086N');
+    gtag('config', 'G-XR2KZE3GQF');
     </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="/static/manifest.json">
-    <title>KenyaCooks</title>
+    <title>KenyaCooks | Local Supper Ideas & Kitchen Timer</title>
+    <meta name="title" content="KenyaCooks | Local Supper Ideas & Kitchen Timer">
+    <meta name="description" content="Stuck on what to cook? Generate Kenyan meal ideas, follow recipes, and use our kitchen timer. Perfect for your daily supper planning.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kenyacooks.onrender.com">
+    <meta property="og:title" content="KenyaCooks - What's for Supper?">
+    <meta property="og:description" content="Generate healthy, balanced Kenyan meal ideas instantly.">
+    <meta property="og:image" content="/static/icons/icon-512.png">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="shortcut icon" type="image/png" href="/static/icons/icon-512.png">
 </head>
 <body>
-    <div class="app-container">
-        <div class="card">
+    <main class="app-container">
+        <section class="card" aria-labelledby="main-title">
             <h1>What's for Supper?</h1>
             <p id="idea">Tap below to get an idea!</p>
             
@@ -52,14 +61,14 @@
                     Share via WhatsApp
                 </button>
             </div>
-        </div>
+        </section>
 
-        <div class="card favorites-card">
+        <section class="card favorites-card" aria-labelledby="fav-title">
             <h3>My Favorites</h3>
             <ul id="favoritesList">
                 </ul>
-        </div>
-    </div>
+            </section>
+    </main>
 
     <script src="/static/script.js"></script>
 </body>
