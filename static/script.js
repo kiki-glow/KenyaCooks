@@ -67,10 +67,19 @@ function shareToWhatsApp() {
 async function getIdea() {
     const res = await fetch('/generate');
     const data = await res.json();
+    
+    // 1. Save the meal for the WhatsApp/Save features
     currentMeal = `${data.base} with ${data.side}`;
+    
+    // 2. Update the main text
     document.getElementById('idea').innerText = `You can cook ${currentMeal}!`;
     
-    // Show both Save and Share buttons
+    // 3. Update the new Recipe and Health Tip fields
+    document.getElementById('recipeDisplay').innerText = data.recipe;
+    document.getElementById('healthDisplay').innerText = data.health_tip;
+    
+    // 4. Make the info box and buttons visible
+    document.getElementById('extraInfo').style.display = "block";
     document.getElementById('saveBtn').style.display = "block";
     document.getElementById('shareBtn').style.display = "block";
 }
